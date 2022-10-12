@@ -5,18 +5,6 @@ orbs:
 
 workflows:
   version: 2
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - plugin-ci/lint
-      - plugin-ci/test
-      - plugin-ci/build
   ci:
     jobs:
       - plugin-ci/lint:
